@@ -1,0 +1,36 @@
+<form class="ui form">
+    <div class="field">
+        <label>Name</label>
+        <div class="twelve wide field">
+          {{input type="text" value=model.name class="field"}}
+        </div>
+    </div>
+    <div class="field">
+        <label>Sport</label>
+        <div class="twelve wide field">
+          {{input type="text" value=model.sport class="field"}}
+        </div>
+    </div>
+    <div class="field">
+        <label>Location</label>
+        <div class="twelve wide field">
+          {{input type="text" value=model.location class="field"}}
+        </div>
+    </div>
+    <div class="two fields">
+      <div class="field">
+        <label>Start Date</label>
+        <div class="eight wide field">
+          {{input type="date" value=model.start class="field"}}
+        </div>
+      </div>
+      <div class="field">
+        <label>End Date</label>
+        <div class="eight wide field">
+          {{input type="date" value=model.finish class="field"}}
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="ui teal button" {{action 'saveComp' model}}>Save</button>
+    {{#link-to 'competitions' class='ui button'}}Cancel{{/link-to}}
+</form>

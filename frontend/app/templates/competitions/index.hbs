@@ -1,0 +1,27 @@
+<h3>Competitions</h3>
+<table class="ui celled striped table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Sport</th>
+      <th>Location</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |competition|}}
+      <tr>
+        <td>{{competition.name}}</td>
+        <td>{{competition.sport}}</td>
+        <td>{{competition.location}}</td>
+        <td>{{format-date date=competition.start}}</td>
+        <td>{{format-date date=competition.finish}}</td>
+        <td></td>
+        <td></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
